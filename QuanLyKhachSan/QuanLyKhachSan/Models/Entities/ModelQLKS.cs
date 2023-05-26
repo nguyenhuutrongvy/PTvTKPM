@@ -10,7 +10,7 @@ namespace QuanLyKhachSan.Models.Entities
         public ModelQLKS()
             : base("name=ModelQLKS")
         {
-        }
+        }  
 
         public virtual DbSet<DatPhong> DatPhongs { get; set; }
         public virtual DbSet<DichVu> DichVus { get; set; }

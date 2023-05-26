@@ -33,6 +33,9 @@
         [Required(ErrorMessage = "Không được để trống Giá Thuê")]
         public int? GiaThue { get; set; }
 
+        [Required(ErrorMessage = "Không được để trống Số Lượng")]
+        public int? SoLuongPhong { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DatPhong> DatPhongs { get; set; }
 

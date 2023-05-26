@@ -99,7 +99,7 @@ namespace QuanLyKhachSan.Controllers
             if (kiemTraPhongBiDatChua.Count > 0)
             {
                 var listDaBiDat = db.DatPhongs.Where(m => m.NgayDen < dateNgayTra && m.NgayTra > dateNgayDen).Select(m => m.MaPhong);
-                var listPhongDatDuoc = db.Phongs.Where(m => !listDaBiDat.Contains(m.MaPhong)).Join(db.LoaiPhongs, p => p.MaLoai, lp => lp.MaLoai, (p, lp) =>
+                var listPhongDatDuoc = db.Phongs.Where(m => !listDaBiDat.Contains(m.MaPhong) && m.SoLuongPhong > 0).Join(db.LoaiPhongs, p => p.MaLoai, lp => lp.MaLoai, (p, lp) =>
                     new PhongView
                     {
                         MaPhong = p.MaPhong,
