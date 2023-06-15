@@ -244,6 +244,15 @@
   <ItemGroup>
     <Content Include="Views\Admin\ThemDichVu.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\DSDatPhong.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\SuaHoaDon.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\ThemHoaDon.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

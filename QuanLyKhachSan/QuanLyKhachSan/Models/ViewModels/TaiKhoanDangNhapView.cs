@@ -8,7 +8,7 @@ namespace QuanLyKhachSan.Models.ViewModels
 {
     public class TaiKhoanDangNhapView
     {
-        [Required(ErrorMessage="Không được để trống Tài Khoản")]
+        [Required(ErrorMessage = "Không được để trống Tài Khoản")]
         public string TenTaiKhoan { get; set; }
 
         [Required(ErrorMessage = "Không được để trống Mật Khẩu")]

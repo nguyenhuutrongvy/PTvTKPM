@@ -27,7 +27,31 @@ namespace QuanLyKhachSan.Controllers
             int Trang = 1;
             try
             {
-                string id = RouteData.Values["id"].ToString();
+                string id = RouteData.Values["id"]?.ToString() ?? "1";
+                Trang = Convert.ToInt16(id);
+                if (Trang > SoTrang) Trang = SoTrang;
+            }
+            catch (Exception e) { }
+            int PhanTuDau = (Trang - 1) * MaxPhanTuMoiTrang;
+            int SoPhanTu = MaxPhanTuMoiTrang;
+            if (Trang == SoTrang) SoPhanTu = TongPhanTu - (SoTrang - 1) * MaxPhanTuMoiTrang;
+            var listMoiTrang = list.GetRange(PhanTuDau, SoPhanTu);
+            ViewBag.STT = PhanTuDau;
+            ViewBag.Trang = Trang;
+            ViewBag.SoTrang = SoTrang;
+            return View(listMoiTrang);
+        }
+
+        [Authorize]
+        public ActionResult DSDatPhong()
+        {
+            var list = db.DatPhongs.ToList();
+            int TongPhanTu = list.Count;
+            int SoTrang = (TongPhanTu - 1) / MaxPhanTuMoiTrang + 1;
+            int Trang = 1;
+            try
+            {
+                string id = RouteData.Values["id"]?.ToString() ?? "1";
                 Trang = Convert.ToInt16(id);
                 if (Trang > SoTrang) Trang = SoTrang;
             }
@@ -65,7 +89,7 @@ namespace QuanLyKhachSan.Controllers
             int Trang = 1;
             try
             {
-                string id = RouteData.Values["id"].ToString();
+                string id = RouteData.Values["id"]?.ToString() ?? "1";
                 Trang = Convert.ToInt16(id);
                 if (Trang > SoTrang) Trang = SoTrang;
             }
@@ -89,7 +113,7 @@ namespace QuanLyKhachSan.Controllers
             int Trang = 1;
             try
             {
-                string id = RouteData.Values["id"].ToString();
+                string id = RouteData.Values["id"]?.ToString() ?? "1";
                 Trang = Convert.ToInt16(id);
                 if (Trang > SoTrang) Trang = SoTrang;
             }
@@ -178,6 +202,16 @@ namespace QuanLyKhachSan.Controllers
             var HamTK = new HamTaiKhoan();
             HamTK.Delete(TenTaiKhoan);
             return RedirectToAction("DSTaiKhoan", "Admin");
+        }
+
+        // Xóa
+        [Authorize]
+        public ActionResult XoaHoaDon()
+        {
+            string billId = RouteData.Values["id"].ToString();
+            var HamDP = new HamDatPhong();
+            HamDP.Delete(int.Parse(billId));
+            return RedirectToAction("DSDatPhong", "Admin");
         }
 
         [Authorize]
@@ -368,6 +402,16 @@ namespace QuanLyKhachSan.Controllers
                 return RedirectToAction("DSDichVu", "Admin");
             }
             return View(dv);
+        }
+
+        // Xóa
+        [Authorize]
+        public ActionResult ThanhToanHoaDon()
+        {
+            string billId = RouteData.Values["id"].ToString();
+            var HamDP = new HamDatPhong();
+            HamDP.ToggleStatus(int.Parse(billId));
+            return RedirectToAction("DSDatPhong", "Admin");
         }
     }
 }

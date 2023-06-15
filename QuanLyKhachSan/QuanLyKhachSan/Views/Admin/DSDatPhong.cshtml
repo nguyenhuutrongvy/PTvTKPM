@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "DS Đặt Phòng";
+    Layout = "~/Views/SharedAdmin/_Layout.cshtml";
+}
+
+@using QuanLyKhachSan.Models.Entities
+@model List<DatPhong>
+
+<script>
+    var element = document.getElementById("collapse5");
+    element.classList.add("in");
+</script>
+
+<h2 style="text-align:center">Danh Sách Đặt Phòng</h2>
+<div class="bang-danh-sach">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên tài khoản</th>
+                <th>Mã phòng</th>
+                <th>Ngày đặt</th>
+                <th>Ngày đến</th>
+                <th>Ngày trả</th>
+                <th>Dịch vụ</th>
+                <th>Thành tiền</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int stt = ViewBag.STT;
+                foreach (DatPhong tk in Model)
+                {
+                    stt++;
+                    <tr>
+                        <td>@stt</td>
+                        <td>@tk.TenTaiKhoan</td>
+                        <td>@tk.MaPhong</td>
+                        <td>@tk.NgayDat</td>
+                        <td>@tk.NgayDen</td>
+                        <td>@tk.NgayTra</td>
+                        <td>@tk.DichVu</td>
+                        <td>@tk.ThanhTien</td>
+                        <td>
+                            @if (tk.NgayTra.ToString().Split(' ')[0] == "01/01/0001")
+                            {
+                                <a href="#" data-toggle="modal" data-target="#myConfirmModal" onclick="myFunction('/Admin/ThanhToanHoaDon/@tk.MaDatPhong')">
+                                    Thanh toán
+                                </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="#" data-toggle="modal" data-target="#myModal" onclick="myFunction('/Admin/XoaHoaDon/@tk.MaDatPhong')">
+                                    Xóa
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="#" data-toggle="modal" data-target="#myModal" onclick="myFunction('/Admin/XoaHoaDon/@tk.MaDatPhong')">
+                                    Xóa
+                                </a>
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+@if (ViewBag.SoTrang > 1)
+{
+    <div class="trang">
+        <ul class="pagination">
+            <li><a href="/Admin/DSDatPhong/1">«</a></li>
+            @for (int i = 1; i <= ViewBag.SoTrang; i++)
+            {
+                <li id="li-@i"><a href="/Admin/DSDatPhong/@i">@i</a></li>
+            }
+            <li><a href="/Admin/DSDatPhong/@ViewBag.SoTrang">»</a></li>
+        </ul>
+    </div>
+
+    <script>
+        var trang = document.getElementById('li-@ViewBag.Trang');
+        trang.classList.add('active');
+    </script>
+}
+@Html.Partial("~/Views/SharedAdmin/_HopThoaiXacNhan.cshtml")

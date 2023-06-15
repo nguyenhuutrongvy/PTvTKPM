@@ -7,8 +7,7 @@ namespace QuanLyKhachSan.Models.Entities
 
     public partial class ModelQLKS : DbContext
     {
-        public ModelQLKS()
-            : base("name=ModelQLKS")
+        public ModelQLKS() : base("name=ModelQLKS")
         {
         }
 

@@ -55,5 +55,13 @@ namespace QuanLyKhachSan.Models.Functions
             db.SaveChanges();
             return MaDatPhong;
         }
+        
+        public int ToggleStatus(int MaDatPhong)
+        {
+            DatPhong dbEntry = db.DatPhongs.Find(MaDatPhong);
+            dbEntry.NgayTra = DateTime.UtcNow;
+            db.SaveChanges();
+            return MaDatPhong;
+        }
     }
 }

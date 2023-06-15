@@ -143,7 +143,8 @@ namespace QuanLyKhachSan.Controllers
                 MaPhong = MaPhong,
                 NgayDat = dateNgayDat,
                 NgayDen = dateNgayDen,
-                NgayTra = dateNgayTra,
+                /*NgayTra = dateNgayTra,*/
+                NgayTra = DateTime.MinValue,
                 DichVu = DichVuSuDung,
                 ThanhTien = ThanhTien
             };
@@ -154,7 +155,8 @@ namespace QuanLyKhachSan.Controllers
             ViewBag.GiaThue = phong.GiaThue;
             ViewBag.NgayDat = dateNgayDat.ToString("dd/MM/yyyy");
             ViewBag.NgayDen = dateNgayDen.ToString("dd/MM/yyyy");
-            ViewBag.NgayTra = dateNgayTra.ToString("dd/MM/yyyy");
+            /*ViewBag.NgayTra = dateNgayTra.ToString("dd/MM/yyyy");*/
+            ViewBag.NgayTra = DateTime.MinValue.ToString("dd/MM/yyyy");
             ViewBag.DichVu = DichVuSuDung;
             ViewBag.ThanhTien = ThanhTien;
             return View("DatPhongThanhCong");
