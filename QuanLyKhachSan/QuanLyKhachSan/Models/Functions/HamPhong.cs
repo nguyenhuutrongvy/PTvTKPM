@@ -73,7 +73,7 @@ namespace QuanLyKhachSan.Models.Functions
                             DuongDanAnh = s.DuongDanAnh,
                             SoLuongPhong = r.SoLuongPhong
                         };
-            listPhongView = query.ToList();
+            listPhongView = query.OrderByDescending(p => p.SoLuongPhong).ToList();
             return listPhongView;
         }
 

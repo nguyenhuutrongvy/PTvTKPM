@@ -34,7 +34,7 @@ namespace QuanLyKhachSan.Controllers
             ViewBag.TenLoai = lp.TenLoai;
             ViewBag.DuongDanAnh = lp.DuongDanAnh;
             ViewBag.GhiChu = lp.GhiChu;
-            var listPhong = db.Phongs.Where(m => m.MaLoai == id).ToList();
+            var listPhong = db.Phongs.Where(m => m.MaLoai == id).OrderByDescending(p=> p.SoLuongPhong).ToList();
             return View(listPhong);
         }
 

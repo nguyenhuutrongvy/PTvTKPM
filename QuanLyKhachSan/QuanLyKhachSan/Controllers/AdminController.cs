@@ -57,9 +57,9 @@ namespace QuanLyKhachSan.Controllers
         }
 
         [Authorize]
-        public ActionResult DSPhong()
+        public ActionResult DSPhong(bool khadung = false)
         {
-            var list = db.Phongs.ToList();
+            var list = khadung ? db.Phongs.Where(p => p.SoLuongPhong <= 0).ToList() : db.Phongs.ToList();
             int TongPhanTu = list.Count;
             int SoTrang = (TongPhanTu - 1) / MaxPhanTuMoiTrang + 1;
             int Trang = 1;
