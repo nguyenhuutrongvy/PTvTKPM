@@ -25,21 +25,31 @@
         <select class="form-control loai-tim-kiem" id="LoaiTimKiem" name="LoaiTimKiem" onchange="changeLabel()">
             <option>Giá Phòng</option>
             <option>Diện Tích</option>
+            <option>Tên Phòng</option>
         </select>
-        <select class="form-control muc-tim-kiem" name="MucTimKiem">
+        <select id="muctimkiem" class="form-control muc-tim-kiem" name="MucTimKiem">
             <option><=</option>
             <option>>=</option>
         </select>
         <label>Giá Trị:</label>
-        <input class="form-control gia-tri-tim-kiem" type="number" name="GiaTri" min="0" placeholder="Nhập Giá Trị" />
+        <input class="form-control gia-tri-tim-kiem" type="number" name="GiaTri" min="0" id="nhap-thong-tin" placeholder="Nhập Giá Trị" />
         <label id="don-vi"></label>
         <script>
             function changeLabel() {
                 var loaitk = document.getElementById('LoaiTimKiem');
                 if (loaitk.value == 'Giá Phòng') {
                     document.getElementById('don-vi').innerText = 'nghìn đồng';
-                } else {
+                    document.getElementById('nhap-thong-tin').type = 'number';
+                    document.getElementById('muctimkiem').style.visibility = 'visible';
+                } else if (loaitk.value == 'Diện Tích') {
                     document.getElementById('don-vi').innerText = 'm\xB2';
+                    document.getElementById('nhap-thong-tin').type = 'number';
+                    document.getElementById('muctimkiem').style.visibility = 'visible';
+                } else
+                {
+                    document.getElementById('don-vi').innerText = '';
+                    document.getElementById('nhap-thong-tin').type = 'text';
+                    document.getElementById('muctimkiem').style.visibility = 'hidden';
                 }
             }
             changeLabel();

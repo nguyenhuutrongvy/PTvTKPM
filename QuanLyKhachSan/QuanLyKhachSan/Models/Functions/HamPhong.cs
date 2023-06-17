@@ -75,8 +75,9 @@ namespace QuanLyKhachSan.Models.Functions
             return listPhongView;
         }
 
-        public List<PhongView> timKiem(string loaiTimKiem, string mucTimKiem, int giaTriTimKiem)
+        public List<PhongView> timKiem(string loaiTimKiem, string mucTimKiem, string giaTri)
         {
+            int giaTriTimKiem = loaiTimKiem == "Diện Tích" || loaiTimKiem == "Giá Phòng" ? Convert.ToInt32(giaTri) : 0;
             List<PhongView> listPhongView;
             var query = from s in db.Phongs
                         join r in db.LoaiPhongs on s.MaLoai equals r.MaLoai
@@ -95,10 +96,14 @@ namespace QuanLyKhachSan.Models.Functions
                 if (mucTimKiem == "<=") listPhongView = query.Where(m => m.DienTich <= giaTriTimKiem).ToList();
                 else listPhongView = query.Where(m => m.DienTich >= giaTriTimKiem).ToList();
             }
-            else
+            else if(loaiTimKiem == "Giá Phòng")
             {
                 if (mucTimKiem == "<=") listPhongView = query.Where(m => m.GiaThue <= giaTriTimKiem).ToList();
                 else listPhongView = query.Where(m => m.GiaThue >= giaTriTimKiem).ToList();
+            }
+            else
+            {
+                listPhongView = query.Where(m => m.TenPhong == giaTri).ToList();
             }
             return listPhongView;
         }
