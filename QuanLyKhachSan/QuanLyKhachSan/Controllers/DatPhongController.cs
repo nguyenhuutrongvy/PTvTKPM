@@ -43,11 +43,10 @@ namespace QuanLyKhachSan.Controllers
             string loaiTimKiem = Request.QueryString["LoaiTimKiem"];
             string mucTimKiem = Request.QueryString["MucTimKiem"];
             string giaTri = Request.QueryString["GiaTri"];
-            int giaTriTimKiem;
-            if (giaTri == "") giaTriTimKiem = 0;
-            else giaTriTimKiem = Convert.ToInt32(giaTri);
+
+            
             var list = new HamPhong();
-            return View(list.timKiem(loaiTimKiem, mucTimKiem, giaTriTimKiem));
+            return View(list.timKiem(loaiTimKiem, mucTimKiem, giaTri));
         }
 
         public ActionResult DatPhong()
