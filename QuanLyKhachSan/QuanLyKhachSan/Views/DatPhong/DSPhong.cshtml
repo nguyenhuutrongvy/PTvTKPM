@@ -16,8 +16,17 @@
             <label>Loại Phòng: @pv.TenLoai</label><br />
             <label>Tên Phòng: @pv.TenPhong</label><br />
             <label>Diện Tích: @pv.DienTich m&sup2;</label><br />
+            <label>Còn lại: @pv.SoLuongPhong phòng</label><br />
             <span class="gia-thue">@pv.GiaThue.000 đ/ngày</span><br />
-            <input type="button" class="btn-dat-phong" onclick="location.href = '/DatPhong/DatPhong/@pv.MaPhong'" value="ĐẶT PHÒNG" />
+            @if (@pv.SoLuongPhong > 0)
+            {
+                <input type="button" class="btn-dat-phong" onclick="location.href = '/DatPhong/DatPhong/@pv.MaPhong'" value="ĐẶT PHÒNG" />
+            }
+            else
+            {
+
+                <input style="background: gray; cursor:not-allowed;" type="button" class="btn-dat-phong" onclick="location.href = '/DatPhong/DatPhong/@pv.MaPhong'" value="ĐẶT PHÒNG" disabled />
+            }
         </div>
     }
 </div>

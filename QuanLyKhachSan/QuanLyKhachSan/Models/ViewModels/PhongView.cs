@@ -13,6 +13,7 @@ namespace QuanLyKhachSan.Models.ViewModels
         public int? DienTich { get; set; }
         public int? GiaThue { get; set; }
         public string TenLoai { get; set; }
+        public int? SoLuongPhong { get; set; }
         public string DuongDanAnh { get; set; }
 
     }

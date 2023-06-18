@@ -21,8 +21,18 @@
                 <img class="img-rounded img-phong" src=@ViewBag.DuongDanAnh alt="Image" width="250" height="149" />
                 <label>Tên Phòng: @p.TenPhong</label><br />
                 <label>Diện Tích: @p.DienTich m&sup2;</label><br />
+                <label>Còn lại: @p.SoLuongPhong phòng</label><br />
                 <span class="gia-thue">@p.GiaThue.000 đ/ngày</span><br />
-                <input type="button" class="btn-dat-phong" onclick="location.href = '/DatPhong/DatPhong/@p.MaPhong'" value="ĐẶT PHÒNG" />
+                @if (p.SoLuongPhong > 0)
+                {
+                    <input type="button" class="btn-dat-phong" onclick="location.href = '/DatPhong/DatPhong/@p.MaPhong'" value="ĐẶT PHÒNG" />
+
+                }
+                else
+                {
+                    <input style="background: gray; cursor: not-allowed;" type="button" class="btn-dat-phong" onclick="location.href = '/DatPhong/DatPhong/@p.MaPhong'" value="ĐẶT PHÒNG" disabled />
+
+                }
             </div>
         }
     </div>

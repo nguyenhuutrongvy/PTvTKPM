@@ -40,6 +40,7 @@ namespace QuanLyKhachSan.Models.Functions
             dbEntry.MaLoai = model.MaLoai;
             dbEntry.DienTich = model.DienTich;
             dbEntry.GiaThue = model.GiaThue;
+            dbEntry.SoLuongPhong = model.SoLuongPhong;
             db.SaveChanges();
             return model.MaPhong;
         }
@@ -69,7 +70,8 @@ namespace QuanLyKhachSan.Models.Functions
                             DienTich = r.DienTich,
                             GiaThue = r.GiaThue,
                             TenLoai = s.TenLoai,
-                            DuongDanAnh = s.DuongDanAnh
+                            DuongDanAnh = s.DuongDanAnh,
+                            SoLuongPhong = r.SoLuongPhong
                         };
             listPhongView = query.ToList();
             return listPhongView;

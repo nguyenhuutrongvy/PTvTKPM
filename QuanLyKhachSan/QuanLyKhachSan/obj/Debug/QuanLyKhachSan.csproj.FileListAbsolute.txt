@@ -98,3 +98,37 @@ D:\PTTKPM\Web_KS\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.
 D:\PTTKPM\Web_KS\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CopyComplete
 D:\PTTKPM\Web_KS\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.dll
 D:\PTTKPM\Web_KS\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\QuanLyKhachSan.dll.config
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\QuanLyKhachSan.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\QuanLyKhachSan.pdb
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\EntityFramework.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\EntityFramework.SqlServer.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\Microsoft.Web.Infrastructure.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\Newtonsoft.Json.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Net.Http.Formatting.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Helpers.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Http.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Http.WebHost.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Mvc.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Razor.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.WebPages.Deployment.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.WebPages.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.WebPages.Razor.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\EntityFramework.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\EntityFramework.SqlServer.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\Newtonsoft.Json.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Net.Http.Formatting.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Helpers.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Http.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Http.WebHost.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Mvc.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.Razor.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.WebPages.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.WebPages.Deployment.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\bin\System.Web.WebPages.Razor.xml
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.AssemblyReference.cache
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CopyComplete
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.dll
+G:\(3) HK2 2022-2023\Mon PTTKPM\123\PTvTKPM\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
