@@ -440,3 +440,44 @@ body {
     font-size: 15px;
     font-weight: bold;
 }
+
+.tt-container {
+    background: linear-gradient(0deg, rgba(255, 0, 150, 0.4), #fadcdc), url("/Content/images/2.jpg");
+    height: 500px;
+    position: relative;
+    /*  -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);*/
+}
+
+.tin-tuc {
+    margin: 0 auto;
+    position: absolute;
+    top: 45%;
+    padding-right : 15px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.relax {
+    margin-top: 10%;
+}
+
+.tm-container {
+    background: linear-gradient(0deg, #4C4C4C, rgba(255, 255, 255, 0.4)), url("/Content/images/images.jpg");
+    height: 500px;
+    position: relative;
+}
+
+.meet {
+    margin: 0 auto;
+    position: absolute;
+    top: 45%;
+    padding-right: 15px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #ffffff
+}
