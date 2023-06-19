@@ -159,6 +159,5 @@ namespace QuanLyKhachSan.Controllers
             ViewBag.ThanhTien = ThanhTien;
             return View("DatPhongThanhCong");
         }
-
     }
 }
